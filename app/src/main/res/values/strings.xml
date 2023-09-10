@@ -2,5 +2,6 @@
     <string name="app_name">TicTacToe</string>
     <string name="message_win">Win</string>
     <string name="message_loose">Loose</string>
+    <string name="message_draw">Draw</string>
 
 </resources>
