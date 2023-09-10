@@ -34,52 +34,83 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void clcBtn1(View view){
-        button1.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button1.getText()==""){
+            button1.setText(cross);
+            CheckerWin();
+            MoveBot();}
+
     }
 
 
     public void clcBtn2(View view){
-        button2.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button2.getText()==""){
+            button2.setText(cross);
+            CheckerWin();
+            MoveBot();}
     }
     public void clcBtn3(View view){
-        button3.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button3.getText()==""){
+            button3.setText(cross);
+            CheckerWin();
+            MoveBot();}
     }
     public void clcBtn4(View view){
-        button4.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button4.getText()==""){
+            button4.setText(cross);
+            CheckerWin();
+            MoveBot();}
     }
     public void clcBtn5(View view){
-        button5.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button5.getText()==""){
+            button5.setText(cross);
+            CheckerWin();
+            MoveBot();}
     }
     public void clcBtn6(View view){
-        button6.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button6.getText()==""){
+            button6.setText(cross);
+            CheckerWin();
+            MoveBot();}
     }
     public void clcBtn7(View view){
-        button7.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button7.getText()==""){
+            button7.setText(cross);
+            CheckerWin();
+            MoveBot();}
+
     }
     public void clcBtn8(View view){
-        button8.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button8.getText()==""){
+            button8.setText(cross);
+            CheckerWin();
+            MoveBot();}
+
     }
     public void clcBtn9(View view){
-        button9.setText(cross);
-        CheckerWin();
-        MoveBot();
+        if(button9.getText()==""){
+            button9.setText(cross);
+            CheckerWin();
+            MoveBot();}
+
     }
+    public void CheckerWinBot(){
+        if(button1.getText()== nul && button2.getText()== nul && button3.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button4.getText()== nul && button5.getText()== nul && button6.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button7.getText()== nul && button8.getText()==nul && button9.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button1.getText()== nul && button4.getText()== nul && button7.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button2.getText()== nul && button5.getText()== nul && button8.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button3.getText()== nul && button6.getText()== nul && button9.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button1.getText()== nul && button5.getText()== nul && button9.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        if(button3.getText()== nul && button5.getText()== nul && button7.getText()== nul ){
+            textResult.setText(R.string.message_loose);}
+        }
     public void CheckerWin(){
         if(button1.getText()== cross && button2.getText()== cross && button3.getText()== cross ){
             textResult.setText(R.string.message_win);}
@@ -97,22 +128,51 @@ public class MainActivity extends AppCompatActivity {
             textResult.setText(R.string.message_win);}
         if(button3.getText()== cross && button5.getText()== cross && button7.getText()== cross ){
             textResult.setText(R.string.message_win);}
-        }
+    }
     private void MoveBot(){
         Random random = new Random();
         int RandomClick = random.nextInt(9) + 1;
         Log.i("Movebot","RandomClick"+RandomClick);
         switch ((RandomClick)){
-            case(1): button1.setText(nul); break;
-            case(2): button2.setText(nul); break;
-            case(3): button3.setText(nul); break;
-            case(4): button4.setText(nul); break;
-            case(5): button5.setText(nul); break;
-            case(6): button6.setText(nul); break;
-            case(7): button7.setText(nul); break;
-            case(8): button8.setText(nul); break;
-            case(9): button9.setText(nul); break;
+            case(1):if(button1.getText()=="") {
+                button1.setText(nul);}
+                else {
+                    MoveBot();}
+                break;
+            case(2): if(button2.getText()==""){
+                button2.setText(nul);}
+            else {
+                MoveBot();}
+            break;
+            case(3): if(button3.getText()==""){
+                button3.setText(nul);}
+            else {MoveBot();}
+            break;
+            case(4): if(button4.getText()==""){
+                button4.setText(nul);}
+            else {MoveBot();}
+            break;
+            case(5): if(button5.getText()==""){
+                button5.setText(nul);}
+            else {MoveBot();}
+            break;
+            case(6): if(button6.getText()==""){
+                button6.setText(nul);}
+            else {MoveBot();}
+            break;
+            case(7):if(button7.getText()==""){
+                button7.setText(nul);}
+            else {MoveBot();}
+            break;
+            case(8): if(button8.getText()==""){
+                button8.setText(nul);}
+            else {MoveBot();}
+            break;
+            case(9): if(button9.getText()==""){
+                button9.setText(nul);}
+            else {MoveBot();}
+            break;
         }
-
+        CheckerWinBot();
     }
 }
