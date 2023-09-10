@@ -292,8 +292,7 @@ public class TicTacToe extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(TicTacToe.this, MainActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(TicTacToe.this, MainActivity.class));
         finish();
 
     }
