@@ -31,7 +31,7 @@ public class TicTacToe extends AppCompatActivity {
         button7 = findViewById(R.id.button7);
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
-        restart = findViewById(R.id.restart);
+        restart = findViewById(R.id.Start);
         textResult = findViewById(R.id.textResult);
         PointsPlayer = findViewById(R.id.PointsPlayer);
         PointsBot = findViewById(R.id.PointsBot);
