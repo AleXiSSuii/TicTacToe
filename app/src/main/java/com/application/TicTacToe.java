@@ -1,6 +1,8 @@
 package com.application;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +19,9 @@ public class TicTacToe extends AppCompatActivity {
     String cross,nul;
     TextView textResult,PointsPlayer,PointsBot;
     int pointsPlayer,pointsBot;
+    private boolean isPlayerTurn = true;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,93 +46,111 @@ public class TicTacToe extends AppCompatActivity {
         pointsBot = 0;
         textResult.setText("");
 
+
     }
     public void clcBtn1(View view){
-        if(button1.getText()=="" && textResult.getText()==""){
-            button1.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+            if(button1.getText()=="" && textResult.getText()==""){
+                button1.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
     }
 
+
     public void clcBtn2(View view){
-        if(button2.getText()==""&& textResult.getText()==""){
-            button2.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+            if(button2.getText()=="" && textResult.getText()==""){
+                button2.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
     }
     public void clcBtn3(View view){
-        if(button3.getText()==""&& textResult.getText()==""){
-            button3.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+
+            if(button3.getText()=="" && textResult.getText()==""){
+                button3.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
     }
     public void clcBtn4(View view){
-        if(button4.getText()==""&& textResult.getText()==""){
-            button4.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+
+            if(button4.getText()=="" && textResult.getText()==""){
+                button4.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
     }
     public void clcBtn5(View view){
-        if(button5.getText()==""&& textResult.getText()==""){
-            button5.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+
+            if(button5.getText()=="" && textResult.getText()==""){
+                button5.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
     }
     public void clcBtn6(View view){
-        if(button6.getText()==""&& textResult.getText()==""){
-            button6.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+
+            if(button6.getText()=="" && textResult.getText()==""){
+                button6.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
     }
     public void clcBtn7(View view){
-        if(button7.getText()==""&& textResult.getText()==""){
-            button7.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+
+            if(button7.getText()=="" && textResult.getText()==""){
+                button7.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
 
     }
     public void clcBtn8(View view){
-        if(button8.getText()==""&& textResult.getText()==""){
-            button8.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+            if(button8.getText()=="" && textResult.getText()==""){
+                button8.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
 
     }
     public void clcBtn9(View view){
-        if(button9.getText()==""&& textResult.getText()==""){
-            button9.setText(cross);
-            CheckerWin();
-            if(textResult.getText()==""){
-                MoveBot();
+
+            if(button9.getText()=="" && textResult.getText()==""){
+                button9.setText(cross);
+                CheckerWin();
+                if(textResult.getText()==""){
+                    MoveBot();
+                }
             }
-        }
+
 
     }
     public void clcRestart(View view){
+        isPlayerTurn = !isPlayerTurn;
         button1.setText("");
         button2.setText("");
         button3.setText("");
@@ -146,11 +169,10 @@ public class TicTacToe extends AppCompatActivity {
         button7.setBackgroundColor(getColor(R.color.purple500));
         button8.setBackgroundColor(getColor(R.color.purple500));
         button9.setBackgroundColor(getColor(R.color.purple500));
-
-
-
-
         textResult.setText("");
+        if(!isPlayerTurn){
+            MoveBot();
+        }
 
 
 
@@ -202,7 +224,8 @@ public class TicTacToe extends AppCompatActivity {
             textResult.setText(R.string.message_win);pointsPlayer++;PointsPlayer.setText(""+pointsPlayer);
             button1.setBackgroundColor(Color.rgb(255,192,203));
             button2.setBackgroundColor(Color.rgb(255,192,203));
-            button3.setBackgroundColor(Color.rgb(255,192,203));}
+            button3.setBackgroundColor(Color.rgb(255,192,203));
+            }
         if(button4.getText()== cross && button5.getText()== cross && button6.getText()== cross ){
             textResult.setText(R.string.message_win);pointsPlayer++;PointsPlayer.setText(""+pointsPlayer);
             button4.setBackgroundColor(Color.rgb(255,192,203));

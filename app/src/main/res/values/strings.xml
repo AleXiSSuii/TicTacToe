@@ -3,5 +3,7 @@
     <string name="message_win">Win</string>
     <string name="message_loose">Loose</string>
     <string name="message_draw">Draw</string>
+    <string name="start" translatable="false">Start</string>
+    <string name="restart" translatable="false">New game</string>
 
 </resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Крестики Нолики</string>
+    <string name="message_win">Вы Победили</string>
+    <string name="message_loose">Вы проиграли</string>
+    <string name="message_draw">Ничья</string>
+    <string name="start" translatable="false">Начать</string>
+    <string name="restart" translatable="false">Новая игра</string>
+
+
+</resources>
